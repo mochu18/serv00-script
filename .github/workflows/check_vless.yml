@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # 更新为 v3 版本
 
       - name: 设置Python环境
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3  # 更新为 v3 版本
         with:
           python-version: '3.x'  # 替换为您需要的 Python 版本
 
@@ -30,4 +30,3 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python3 vless/recover_vless.py
-
